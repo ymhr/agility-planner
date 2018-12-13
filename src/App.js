@@ -5,6 +5,7 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AuthContext from './contexts/auth';
 import Main from './Main';
+import Header from 'components/Header';
 
 const uiConfig = {
 	signInFlow: 'popup',
@@ -17,18 +18,6 @@ const uiConfig = {
 };
 
 const currentUser = JSON.parse(localStorage.getItem('user'));
-
-function LogOut() {
-	const auth = useContext(AuthContext);
-
-	function signUserOut() {
-		firebase.auth().signOut();
-		auth.user = null;
-		localStorage.removeItem('user');
-	}
-
-	return <button onClick={signUserOut}>Log out</button>;
-}
 
 export default function App() {
 	const auth = useContext(AuthContext);
@@ -59,7 +48,7 @@ export default function App() {
 
 			{user && (
 				<>
-					<LogOut />
+					<Header />
 					<Router>
 						<Main />
 					</Router>

@@ -4,13 +4,15 @@
   "private": true,
   "dependencies": {
     "firebase": "^5.7.0",
+    "luxon": "^1.8.2",
     "prettier": "^1.15.3",
     "react": "^16.7.0-alpha.2",
     "react-dom": "^16.7.0-alpha.2",
     "react-firebaseui": "^3.1.2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "styled-components": "^4.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
