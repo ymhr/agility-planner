@@ -16,7 +16,7 @@ function useFirestore(collection, transformResults = null) {
 				setLoading(false);
 			},
 			function(e) {
-				console.log(e);
+				console.error(e);
 				setError(e);
 				setLoading(false);
 			}

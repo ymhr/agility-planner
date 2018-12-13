@@ -1,15 +1,18 @@
 import React, { useContext } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import useFirestore from 'hooks/useFirestore';
 import AuthContext from 'contexts/auth';
 import firebase from 'firebase/app';
 import EventListing from 'components/EventListing';
+import Container from 'components/Container';
 
 export default function Main() {
 	return (
 		<>
-			<Route path="/" exact component={Home} />
-			<Route path="/about" component={About} />
+			<Container>
+				<Route path="/" exact component={Home} />
+				<Route path="/about" component={About} />
+			</Container>
 		</>
 	);
 }

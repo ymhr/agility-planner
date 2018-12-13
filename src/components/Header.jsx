@@ -2,9 +2,13 @@ import React, { useContext } from 'react';
 import AuthContext from 'contexts/auth';
 import firebase from 'firebase/app';
 import styled from 'styled-components';
+import Container from 'components/Container';
 
-const HeaderBar = styled.div`
+const HeaderBar = styled.header`
 	background-color: #cccccc;
+`;
+
+const Content = styled.div`
 	display: flex;
 	justify-content: space-between;
 `;
@@ -12,8 +16,12 @@ const HeaderBar = styled.div`
 export default function Header() {
 	return (
 		<HeaderBar>
-			<h1>Agility Planner</h1>
-			<LogOut />
+			<Container>
+				<Content>
+					<h1>Agility Planner</h1>
+					<LogOut />
+				</Content>
+			</Container>
 		</HeaderBar>
 	);
 }

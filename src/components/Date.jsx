@@ -7,6 +7,7 @@ const Time = styled.div`
 	border-bottom: 1px dashed #2460c1;
 	display: inline-block;
 	transition: all 0.1s ease;
+	padding: 2px;
 
 	&:hover {
 		transform: scale(1.1);
@@ -19,7 +20,6 @@ function Date({ timestamp }) {
 	if (!timestamp) return null;
 
 	const datetime = new DateTime.fromMillis(Number(timestamp.seconds + '000'));
-	console.log(datetime);
 	return <Time>{datetime.toLocaleString()}</Time>;
 }
 
