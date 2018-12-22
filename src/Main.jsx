@@ -5,6 +5,7 @@ import AuthContext from 'contexts/auth';
 import firebase from 'firebase/app';
 import EventListing from 'components/EventListing';
 import Container from 'components/Container';
+import AddEvent from 'components/AddEvent';
 
 export default function Main() {
 	return (
@@ -46,6 +47,9 @@ function Home() {
 
 	return (
 		<>
+			<br />
+			<AddEvent />
+
 			{events.map((item) => (
 				<EventListing key={item.id} event={item} />
 			))}

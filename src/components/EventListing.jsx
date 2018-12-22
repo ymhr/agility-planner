@@ -12,10 +12,14 @@ export default function EventListing({ event }) {
 						<td>
 							<Date timestamp={event.registration_closes} />
 						</td>
+					</tr>
+					<tr>
 						<td>Start date: </td>
 						<td>
 							<Date timestamp={event.start_date} />
 						</td>
+					</tr>
+					<tr>
 						<td>End date: </td>
 						<td>
 							<Date timestamp={event.end_date} />
